@@ -47,10 +47,10 @@ namespace BankAccountLibrary2Tests
             var expected = 0; // the amount we expect
 
             // act 
-            var result = bankAccount.Withdraw(withdrawalAmount);
+            bankAccount.Withdraw(withdrawalAmount);
 
             // assert
-            Assert.Equal(expected, result);
+            Assert.Equal(expected, bankAccount.Balance);
         }
     }
 }

@@ -9,7 +9,7 @@
         }
 
         public string Name { get; }
-        public decimal Balance { get; }
+        public decimal Balance { get; set; }
 
         public bool Validate()
         {
@@ -21,9 +21,12 @@
             return Balance.Equals(10);
         }
 
-        public object Withdraw()
+        public void Withdraw(decimal amount)
         {
-            throw new NotImplementedException();
+            if (amount !>= Balance)
+            {
+                Balance = Balance - amount;
+            }
         }
     }
 }
