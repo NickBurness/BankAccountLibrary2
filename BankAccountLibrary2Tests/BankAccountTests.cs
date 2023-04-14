@@ -9,6 +9,7 @@ namespace BankAccountLibrary2Tests
         [Theory]
         [InlineData("Steve", 0, true)]
         [InlineData("St3v3", 0, false)]
+        [InlineData("Eddie", 0, true)]
         public void AccountName_DoesNotContainNumbers(string name, decimal balance, bool expected)
         {
             var bankAccount = new BankAccount(name, balance);
