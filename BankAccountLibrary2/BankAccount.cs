@@ -13,7 +13,7 @@
 
         public bool Validate()
         {
-            return Name.Equals("Steve");
+            return !Name.Any(char.IsDigit);
         }
 
         public bool ValidateStartingBalance()
